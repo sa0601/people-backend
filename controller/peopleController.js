@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         res.json( await People.create(req.body))
-    } catch (error){
+    } catch(error){
         res.status(400).json(error)
     }
 })
